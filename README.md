@@ -31,12 +31,12 @@ Since it handles pointers, instead of actual objects, you should take care to pr
 #### To declare a LinkedPointerList object
 ```c++
 // Instantiate a LinkedPointerList holding pointers to your custom objects of type 'MyObject'
-LinkedPointerList<MyObject> myList = LinkedPointerList<MyObject>();
-
-// Or just this
 LinkedPointerList<MyObject> myList;
 
-// If you are instantiating a pointer LinkedPointerList that you will delete later manually
+// ...which is the same as
+LinkedPointerList<MyObject> myList = LinkedPointerList<MyObject>();
+
+// If instantiating a pointer to LinkedPointerList, that you will delete later manually
 LinkedPointerList<MyObject> *pMyList = new LinkedPointerList<MyObject>();
 ```
 
