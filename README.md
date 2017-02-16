@@ -27,8 +27,8 @@ This README is a modified version of the original LinkedList's README.md by Ivan
 ### The `LinkedPointerList` class
 
 The `LinkedPointerList` is a good choice when you to handle lists of objects of the same type. Unlike the original `LinkedList`,
-this one is targeted to have a very small RAM consumption. Therefore, it is limited to 255 entries, but in real life you should
-use it for up to few dozens.
+which was targeted for features, this one is targeted for a very small RAM consumption. Therefore, it is limited to 255 entries, 
+but in real life you should use it for up to few dozens (since in Arduino there is not much RAM to begin with).
 
 Since it handles pointers, instead of actual objects, you should take care to prevent memory-leaks.
 
