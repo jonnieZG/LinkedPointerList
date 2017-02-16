@@ -16,6 +16,10 @@ with small lists with up to a few dozens of entries**, the optimization cuts are
 3. Paste the modified folder into your Library folder (`Libraries` folder inside  user home directory).
 4. Reopen your Arduino IDE.
 
+## NOTE
+
+This README is a modified version of the original LinkedList's README.md by Ivan Seidel.
+
 -------------------------
 
 ## Getting started
@@ -28,7 +32,7 @@ use it for up to few dozens.
 
 Since it handles pointers, instead of actual objects, you should take care to prevent memory-leaks.
 
-#### To declare a LinkedPointerList object
+#### Declaring a LinkedPointerList Object
 ```c++
 // Instantiate a LinkedPointerList holding pointers to your custom objects of type 'MyObject'
 LinkedPointerList<MyObject> myList;
@@ -40,7 +44,7 @@ LinkedPointerList<MyObject> myList = LinkedPointerList<MyObject>();
 LinkedPointerList<MyObject> *pMyList = new LinkedPointerList<MyObject>();
 ```
 
-#### Getting the size of the linked list
+#### Getting the Size of the List
 ```c++
 // To get the size of a linked list
 int listSize = myList.size();
@@ -49,7 +53,7 @@ int listSize = myList.size();
 int pListSize = pMyList->size();
 ```
 
-#### Adding (pointers to) elements
+#### Adding Entries (Pointers to Elements)
 
 ```c++
 // Inserting at the END of the list - you must pass POINTERS instead of actual objects
@@ -63,7 +67,7 @@ myList.add(3, &myObject); // Add at index 3
 myList.unshift(&myObject);
 ```
 
-#### Getting elements
+#### Getting Entries
 
 ```c++
 // Get a pointer to the FIRST element
@@ -76,7 +80,7 @@ MyObject *pMyObject = myList.get(2);
 MyObject *pMyObject = myList.get(myList.size() - 1);
 ```
 
-#### Changing elements
+#### Changing Entries
 ```c++
 // Change the first element to point to myObject
 myList.set(0, &myObject);
@@ -88,7 +92,7 @@ myList.set(2, &myObject);
 myList.set(myList.size() - 1, &myObject);
 ```
 
-#### Removing elements
+#### Removing Entries
 ```c++
 // Remove the first object
 myList.remove(0);
